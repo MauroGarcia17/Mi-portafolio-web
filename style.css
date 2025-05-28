@@ -2609,12 +2609,17 @@ Version:	1.1
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Espacio entre logos */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #clients .single-clients {
     width: auto;
     text-align: center;
+	width: 230px !important; /* O el valor que mejor se vea */
+    margin: 0 auto !important;
+    float: none !important;
 }
 
 #clients::before {
