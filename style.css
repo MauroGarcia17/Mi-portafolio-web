@@ -2577,7 +2577,7 @@ Version:	1.1
 =========================*/
 
 #clients .single-clients {
-	    width: 80%;
+	    width: 100%;
 }
 
 #clients.section {
@@ -2591,6 +2591,32 @@ Version:	1.1
 	position: relative;
 	background-attachment: fixed;
 }
+
+/* Corrige el centrado de los logos de clientes */
+
+/* 1. Elimina o comenta el display:flex y centrado de #clients.section, ya que no aplica aquí */
+/*
+#clients.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+*/
+
+/* 2. Agrega este bloque para centrar los logos dentro del slider */
+#clients .clients-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espacio entre logos */
+}
+
+#clients .single-clients {
+    width: auto;
+    text-align: center;
+}
+
 #clients::before {
 	position: absolute;
 	left: 0;
@@ -2601,8 +2627,11 @@ Version:	1.1
 	opacity: 0.8;
 	content: "";
 }
-#clients.style2{
-	padding:80px 0;
+
+#clients .single-clients img {
+    max-width: 120px; /* Ajusta este valor según el tamaño que desees */
+    height: auto;
+    display: inline-block;
 }
 /*=======================
   End Clients
@@ -2678,7 +2707,7 @@ Version:	1.1
 	border-radius: 50px;
 	background: #f1f1f1;
 	color: #555;
-	padding-right: 90px;
+ padding-right: 90px;
 }
 #footer-top .news-form  input::-webkit-input-placeholder {
     opacity: 1;
